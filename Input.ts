@@ -8,7 +8,7 @@ var Edge = EdgeMod.Edge;
 
 export class Input {
 	
-	edges;
+	edges: Array<Edge>;
 	constructor() {
 		this.edges.push(new Edge(new Vertex(0), new Vertex(1), 4));
 		this.edges.push(new Edge(new Vertex(0), new Vertex(7), 8));
