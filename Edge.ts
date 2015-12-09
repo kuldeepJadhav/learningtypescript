@@ -7,5 +7,5 @@ export class Edge {
 		this.vertexFrom = from;
 		this.vertexTo = to;
 		this.distance = distance;
-	} 
+	}
 }

@@ -1,7 +1,7 @@
 
 export class Vertex {
-		id: string;
-		constructor(id: string) {
+		id: number;
+		constructor(id: number) {
 			this.id = id;
 		}
 }
