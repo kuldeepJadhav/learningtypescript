@@ -5,6 +5,7 @@ import EdgeMod = require('./Edge');
 
 var Vertex = VertexMod.Vertex;
 var Edge = EdgeMod.Edge;
+export var totalNodes = 9;
 export var edges = [
 	new Edge(new Vertex(0), new Vertex(1), 4),
 	new Edge(new Vertex(0), new Vertex(7), 8),
