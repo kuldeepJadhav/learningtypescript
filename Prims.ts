@@ -1,20 +1,21 @@
 
-import InputMod = require('./Input');
+
 import OutputMod = require('./Output');
+import MinimumSpanningMod = require('./MinimumSpanning');
 var Output = OutputMod.Output;
-export class Prims {
+export class Prims implements MinimumSpanningMod.MinimumSpanning {
 	output = [];
-	prims() {
+	findMinimumSpanningTree(edges, totalNodes) {
 		var self = this;
-		var edges = InputMod.edges;
+		
 		if (!edges) {
 			throw 'Please provide edges for the graph!!!!';
 		}
 		var visitedEdges: number[] = [];
 		console.log('edges provided are ', edges);
-		var totalNodes = InputMod.totalNodes;
+		
 		visitedEdges.push(edges[0].vertexFrom.id);
-		for (var nodeCounter = 0; nodeCounter < totalNodes; nodeCounter++) {
+		for (var nodeCounter = 0; nodeCounter < totalNodes-1; nodeCounter++) {
 			var miniDist = 999;
 			var nextToNode = null;
 			var nextFromNode = null;
@@ -50,8 +51,8 @@ export class Prims {
 
 		}
 
-		console.log('Algo ran ', visitedEdges, self.output);
-
+		
+		return self.output;
 
 	}
 }
